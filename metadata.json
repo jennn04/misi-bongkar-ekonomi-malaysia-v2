@@ -1,0 +1,6 @@
+{
+  "name": "Misi Bongkar Ekonomi Malaysia",
+  "description": "Buku skrap pendidikan pop-up 3D interaktif yang menghidupkan projek buatan tangan Misi Bongkar Ekonomi Malaysia merangkumi Pertanian, Perindustrian, Perdagangan, dan Pelancongan.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

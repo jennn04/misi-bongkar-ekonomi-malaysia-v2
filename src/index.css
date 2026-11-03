@@ -1,0 +1,157 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Bricolage Grotesque', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+  }
+}
+
+/* 3D Paper Engineering & Book Studio Utilities */
+.book-perspective {
+  perspective: 2400px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Realistic Matte Black Scrapbook Cardstock Texture */
+.scrapbook-black-page {
+  background-color: #17181b;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0),
+    radial-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 0),
+    linear-gradient(145deg, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 0.22) 100%);
+  background-size: 22px 22px, 31px 31px, 100% 100%;
+  background-position: 0 0, 11px 13px, 0 0;
+}
+
+/* Studio Tabletop Surface */
+.studio-table-bg {
+  background:
+    radial-gradient(ellipse 80% 65% at 50% 42%, rgba(251, 243, 228, 0.11) 0%, rgba(30, 27, 24, 0.65) 58%, #121110 100%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 245, 230, 0.014) 0px,
+      rgba(255, 245, 230, 0.014) 2px,
+      transparent 2px,
+      transparent 14px
+    ),
+    #191715;
+}
+
+/* Raised Die-Cut Sticker Effect */
+.diecut-sticker {
+  filter:
+    drop-shadow(0 2px 0 #ffffff)
+    drop-shadow(0 -1.5px 0 #ffffff)
+    drop-shadow(1.5px 0 0 #ffffff)
+    drop-shadow(-1.5px 0 0 #ffffff)
+    drop-shadow(0 8px 12px rgba(0, 0, 0, 0.55));
+}
+
+/* Thick Cardstock Layer Elevation */
+.paper-raised-sm {
+  box-shadow:
+    0 1.5px 0 rgba(255, 255, 255, 0.18),
+    0 3px 0 rgba(15, 15, 15, 0.9),
+    0 7px 14px rgba(0, 0, 0, 0.55);
+}
+
+.paper-raised-md {
+  box-shadow:
+    0 2px 0 rgba(255, 255, 255, 0.22),
+    0 4px 0 #d6d3cd,
+    0 12px 22px rgba(0, 0, 0, 0.62);
+}
+
+.paper-raised-cardboard {
+  box-shadow:
+    0 2px 0 #f3e3c3,
+    0 5px 0 #b89c6d,
+    0 8px 0 #8c7248,
+    0 18px 30px rgba(0, 0, 0, 0.72);
+}
+
+/* Scalloped Mat Edge Simulation */
+.scalloped-lime-mat {
+  background-color: #b7e124;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px, transparent 0);
+  background-size: 14px 14px;
+  box-shadow:
+    0 0 0 3px #b7e124,
+    0 3px 0 3px #6b8e0d,
+    0 10px 20px rgba(0, 0, 0, 0.58);
+}
+
+/* Stacked Book Page Thickness Edges */
+.page-stack-left {
+  background: repeating-linear-gradient(
+    90deg,
+    #25262b 0px,
+    #25262b 1.5px,
+    #dcd7ce 1.5px,
+    #dcd7ce 2.5px,
+    #16171a 2.5px,
+    #16171a 4px
+  );
+}
+
+.page-stack-right {
+  background: repeating-linear-gradient(
+    90deg,
+    #16171a 0px,
+    #16171a 1.5px,
+    #dcd7ce 1.5px,
+    #dcd7ce 2.5px,
+    #25262b 2.5px,
+    #25262b 4px
+  );
+}
+
+.page-stack-bottom {
+  background: repeating-linear-gradient(
+    180deg,
+    #1d1e22 0px,
+    #1d1e22 1.5px,
+    #d6d1c7 1.5px,
+    #d6d1c7 2.5px,
+    #121316 2.5px,
+    #121316 4px
+  );
+}
+
+/* Custom Scrollbar for Modals */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.04);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 9999px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
